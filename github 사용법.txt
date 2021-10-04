@@ -75,7 +75,7 @@ rm -rf .git
 github에 업데이트 하는법
 @@@@@@@@@@@@@@@@@@@@@@@@@@@
 1. git add .
-2. git commit -m "secound commit(예시임)"
+2. git commit -m "second commit(예시임)"
 3. git push origin main
 
 
