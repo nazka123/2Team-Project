@@ -66,8 +66,8 @@ git remote -v
 git remote remove origin 
 
 7. github 올리기
-git push origin master
-
+git push origin main
+(git push -f origin main 이것의 경우 기존내용 삭제후 업로드)
 8. git 리셋 하기
 rm -rf .git
 
