@@ -1,0 +1,22 @@
+비주얼 스튜디오 환경만들기
+
+1. node.js 설치  Next만 누르면 됩니다.
+ *주의사항*  중간에 환경자동설치 체크 필수!
+(Automaticcally install ....이라고 내용 나오는거 체크)
+
+2. 설치 완료 후 윈도우키 + R , cmd 입력
+cmd창에서 node -v 입력(v14.17.6)버전 확인
+npm -v 입력(6.14.15)확인  --버전은 틀릴수있음
+이게 떠야 node.js 설치가 된것입니다.
+
+3. 비주얼스투디오 코드 설치 Next만 누르면 됩니다.
+*중요*
+실행 후 우측 바에 있는 Extensions 클릭
+검색창에 Html Snippets, JavaScript(ES6), Prettier-code fomatter
+Auto close Tag, Auto Rename Tag, Live Server 설치!
+
+설치 후   파일-> 기본 설정-> 설정 ->  format 검색
+	 -> Editor(Default ForMatter 안에 내용 Prettier-code formatter 변경)
+	-> Editor(Format on Save 체크!)
+
+완료입니다. 화이팅합시다!!!

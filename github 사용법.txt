@@ -14,22 +14,30 @@ git config --global user.email "your_email"
 3. 정보 확인하기
 git config --list
 
-!!!중요!!!!
+!!!중요!!!! 터미널에서 사용가능한 단축키
+1.
 q + ; + shift 로 행동취소 가능
-
+2.
+ctrl + insert 복사하기
+3.
+shift + insert 붙여넣기
 
 
 **설정 삭제 하는방법**
 1. 중복 없을 경우
-git config --unset --global 삭제할 것 
+git config --unset --global
+삭제할 것 
 
 2. 중복 있을 경우
-git config --unset-all --global 삭제할 것 
+git config --unset-all --global
+삭제할 것 
 
 
 
 **github master -> main으로 변경하기**
-1. git branch -m master main (master로 입력하면 master가 되겠죠)
+1.
+git branch -m master main
+(master로 입력하면 master가 되겠죠)
 
 
 @@@@@@@@@@@@@@@@@@@@@@@@@
