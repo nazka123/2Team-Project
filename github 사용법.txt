@@ -1,0 +1,82 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@
+환경설정
+@@@@@@@@@@@@@@@@@@@@@@@@@
+깃 설치는 당연한거 아시죠?
+리녹스, 윈도우 확인하고 최신버전 설치
+
+
+1. 유저이름 설정
+git config --global user.name "your_name" 
+
+2. 유저 이메일 설정
+git config --global user.email "your_email"
+
+3. 정보 확인하기
+git config --list
+
+!!!중요!!!!
+q + ; + shift 로 행동취소 가능
+
+
+
+**설정 삭제 하는방법**
+1. 중복 없을 경우
+git config --unset --global 삭제할 것 
+
+2. 중복 있을 경우
+git config --unset-all --global 삭제할 것 
+
+
+
+**github master -> main으로 변경하기**
+1. git branch -m master main (master로 입력하면 master가 되겠죠)
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@
+Github 처음 코드 업로드하기
+@@@@@@@@@@@@@@@@@@@@@@@@@
+1. 초기화
+git init
+
+2. 추가할 파일 더하기
+git add .
+
+3. 상태확인
+git status
+
+4. 히스토리 만들기 (필수로해야됨)
+git commit -m "first commit(예시임)"
+
+5. github repository랑 내 로컬 프로젝트랑 연결하기
+git remote add origin https://github.com/nazka123/2team-project.git
+			(원하는 프로젝트 깃 주소)
+
+6. 잘됬느지 확인하기(선택사항)
+git remote -v
+
+**만약 주소를 잘못입력하거나 바꿔야 할 경우**
+git remote remove origin 
+
+7. github 올리기
+git push origin master
+
+8. git 리셋 하기
+rm -rf .git
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@
+github에 업데이트 하는법
+@@@@@@@@@@@@@@@@@@@@@@@@@@@
+1. git add .
+2. git commit -m "secound commit(예시임)"
+3. git push origin main
+
+
+
+
+
+
+
+
+
+
+
