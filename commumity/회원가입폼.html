@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 페이지</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h2 class="text-center mt-5 mb-4 font-weight-bold">회원 가입</h2>
+    <div class="container d-flex justify-content-center">
+      <span class="border py-3">
+        <form action="${contextPath }/member/addMember.do" method="POST">
+          <div class="container ml-4">
+            <!-- 아이디 그룹 -->
+            <div class="form-group">
+              <div class="form-row">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary col-2"
+                  disabled
+                >
+                  아이디
+                </button>
+                <div id="id_check_message_sub"></div>
+                <!-- 아이디 데이터 -->
+                <div class="col-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="member_id"
+                    name="member_id"
+                    value=""
+                  />
+                  <div id="id_check_message"></div>
+                </div>
+              </div>
+            </div>
+            <!-- 아이디 그룹 끝 -->
+            <!-- 비밀번호 그룹 -->
+            <div class="form-group">
+              <div class="form-row">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary col-2"
+                  disabled
+                >
+                  비밀번호
+                </button>
+                <!-- 비밀번호 데이터 -->
+                <div class="col-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="member_pw"
+                    name="member_pw"
+                  />
+                  <div id="pw_check_message"></div>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary col-3"
+                  disabled
+                >
+                  비밀번호 재확인
+                </button>
+                <!-- 비밀번호 재확인 데이터 -->
+                <div class="col-3">
+                  <label class="sr-only" for="inlineFormInputName"></label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="member_pw_check"
+                    name="member_pw_check"
+                  />
+                  <div id="pw_check_message2"></div>
+                </div>
+              </div>
+            </div>
+            <!-- 비밀번호 그룹 끝 -->
+            <!-- 이름 그룹 -->
+            <div class="form-group">
+              <div class="form-row">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary col-2"
+                  disabled
+                >
+                  이름
+                </button>
+                <!-- 이름 데이터 -->
+                <div class="col-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    name="member_name"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- 이름 그룹 끝 -->
+            <!-- 성별 그룹 -->
+            <fieldset class="form-group">
+              <div class="form-row">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary col-2"
+                  disabled
+                >
+                  성별
+                </button>
+
+                <div
+                  class="col-3 d-flex justify-content-center align-items-center"
+                >
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="member_gender"
+                      value="남"
+                      checked
+                    />
+                    <label class="form-check-label" for="gridRadios1">
+                      남자
+                    </label>
+                  </div>
+                  <div class="col-1"></div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="member_gender"
+                      value="여"
+                    />
+                    <label class="form-check-label" for="gridRadios2">
+                      여자
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <!-- 성별 그룹 끝 -->
+            <!-- 전화번호 그룹 -->
+            <div class="form-group">
+              <div class="form-row">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary col-2"
+                  disabled
+                >
+                  전화번호
+                </button>
+                <div class="col-3">
+                  <select
+                    id=""
+                    class="form-control text-center"
+                    name="member_hp"
+                  >
+                    <option selected>010</option>
+                    <option>011</option>
+                    <option>012</option>
+                    <option>013</option>
+                    <option>014</option>
+                    <option>015</option>
+                    <option>016</option>
+                    <option>017</option>
+                    <option>018</option>
+                    <option>019</option>
+                  </select>
+                </div>
+
+                <div class="col-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    name="member_hp2"
+                    maxlength="4"
+                  />
+                </div>
+
+                <div class="col-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    name="member_hp3"
+                    maxlength="4"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- 전화번호 그룹 끝 -->
+            <!-- 생년월일 그룹 -->
+            <div class="form-group">
+              <div class="form-row">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary col-2"
+                  disabled
+                >
+                  생년월일
+                </button>
+                <div class="col-3">
+                  <select id="year" class="form-control" name="member_birth_y">
+                    <option></option>
+                  </select>
+                </div>
+                <div class="col-3">
+                  <select id="month" class="form-control" name="member_birth_m">
+                    <option></option>
+                  </select>
+                </div>
+                <div class="col-3">
+                  <select id="day" class="form-control" name="member_birth_d">
+                    <option></option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- 생년월일 그룹 끝 -->
+            <!-- 이메일 그룹 -->
+            <div class="form-group">
+              <div class="form-row">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary col-2"
+                  disabled
+                >
+                  이메일
+                </button>
+                <div class="col-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    name="member_email"
+                  />
+                </div>
+                <div class="col-3">
+                  <select id="" class="form-control" name="member_email2">
+                    <option selected>@naver.com</option>
+                    <option>@daum.net</option>
+                    <option>@google.com</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- 이메일 그룹 끝 -->
+            <!-- 주소그룹 -->
+            <div class="form-group">
+              <div class="form-row">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary col-2"
+                  disabled
+                >
+                  주소
+                </button>
+                <div class="col-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="member_zonecode"
+                    name="member_zonecode"
+                    placeholder="우편번호"
+                    readonly
+                  />
+                </div>
+                <button
+                  type="button"
+                  onclick="openDaumPostcode()"
+                  class="btn btn-outline-secondary col-2"
+                >
+                  주소찾기
+                </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control col-11"
+                id="member_roadAddress"
+                name="member_roadAddress"
+                readonly
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control col-11"
+                id="member_remainingAddress"
+                name="member_remainingAddress"
+              />
+            </div>
+          </div>
+          <!-- 주소그룹 끝 -->
+          <!-- 가입하기, 뒤로기가 버튼 -->
+          <div class="mt-4 mb-1 d-flex justify-content-center">
+            <button
+              type="submit"
+              class="btn btn-outline-secondary mr-3"
+              id="submit_button"
+            >
+              가입하기
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+              뒤로가기
+            </button>
+          </div>
+          <!-- 가입하기, 뒤로가기 버튼 끝 -->
+        </form>
+      </span>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
